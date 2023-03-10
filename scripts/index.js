@@ -4,6 +4,8 @@ const dropArea = document.querySelector(".drag-area"),
 	dragHeader = dropArea.querySelector(".drag-area_header"),
 	dragSharing = dropArea.querySelector(".drag-area_sharing"),
 	dragImport = dropArea.querySelector(".import"),
+	metadata = document.querySelector(".metadata_container"),
+	toast = document.querySelector(".toast"),
 	button = dropArea.querySelector(".upload_button"),
 	input = dropArea.querySelector(".hidden_input");
 let file; //this is a global variable and we'll use it inside multiple functions
@@ -53,9 +55,23 @@ function showFile() {
 		dragHeader.classList.add("hidden_element");
 		dragSharing.classList.remove("hidden_element");
 		dragImport.classList.add("hidden_element");
+		metadata.classList.remove("hidden_element");
 	} else {
 		alert("This is not an Image File!");
 		dropArea.classList.remove("active");
 		dragText.textContent = "Drag & Drop to Upload File";
 	}
 }
+
+function showToast() {
+	toast.classList.remove("hidden_element");
+	setTimeout(() => {
+		toast.classList.add("hidden_element");
+	}, 1500);
+}
+
+let copyAddress = document.querySelector(".image_address");
+
+copyAddress.addEventListener("click", () => {
+	showToast();
+});
