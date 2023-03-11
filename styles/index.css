@@ -200,6 +200,8 @@ li {
 	flex-direction: row;
 	gap: 16px;
 	margin: 0 auto;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .info_cards .info {
@@ -616,6 +618,10 @@ footer nav {
 	body {
 		padding: 0 16px;
 	}
+
+	header {
+		max-width: 100%;
+	}
 	.navigation_header {
 		overflow-x: scroll;
 		-ms-overflow-style: none; /* IE and Edge */
@@ -629,7 +635,7 @@ footer nav {
 	}
 	.title_container h1 {
 		font-size: 32px;
-		line-height: 32px;
+		line-height: 36px;
 	}
 	.title_container p {
 		font-size: 13px;
