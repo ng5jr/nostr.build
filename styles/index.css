@@ -621,6 +621,9 @@ footer nav {
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
 	}
+	.navigation_header::-webkit-scrollbar {
+		display: none;
+	}
 	.title_container {
 		width: 100%;
 	}
