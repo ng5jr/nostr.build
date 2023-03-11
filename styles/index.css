@@ -390,6 +390,14 @@ li {
 	border: 1px solid #392f73;
 }
 
+.input_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
 .import_icon {
 	width: 48px;
 	height: 48px;
@@ -658,11 +666,13 @@ footer nav {
 	}
 
 	.import_button {
-		flex: 1;
+		width: 100%;
 	}
 
 	.input_url {
-		max-width: 100%;
+		max-width: calc(100% - 56px);
+		flex: 1;
+		font-size: 12px;
 	}
 	.drag-area_sharing {
 		justify-content: center;
@@ -682,6 +692,11 @@ footer nav {
 		margin: auto;
 		left: 0;
 	}
+
+	.input_container {
+		gap: 8px;
+		max-width: 100%;
+	}
 }
 
 @media (min-width: 565px) {
@@ -694,7 +709,7 @@ footer nav {
 
 @media (min-width: 516px) {
 	.import_button {
-		flex: unset;
+		width: fit-content;
 	}
 }
 
@@ -724,6 +739,12 @@ footer nav {
 	}
 	.import_button {
 		flex: unset;
+	}
+
+	.input_url {
+		max-width: unset;
+		flex: 1;
+		font-size: 16px;
 	}
 	.metadata_container {
 		width: 696px;
