@@ -319,6 +319,7 @@ li {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 18px;
+	border: none;
 }
 
 .drag-area_header {
@@ -473,6 +474,7 @@ li {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	flex: 1;
 }
 
 .metadata_info h3 {
