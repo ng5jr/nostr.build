@@ -198,3 +198,11 @@ h1 {
 
 	opacity: 0.5;
 }
+
+main {
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

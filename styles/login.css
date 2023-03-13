@@ -222,7 +222,11 @@ body {
 	display: none;
 }
 
-footer {
-	padding-bottom: 0;
-	bottom: 0;
+main {
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
 }

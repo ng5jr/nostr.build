@@ -88,81 +88,83 @@
 				</a>
 			</nav>
 		</header>
-		<div class="title_container">
-			<h1>Nostr image uploader</h1>
-			<p>The easiest and more efficient way to upload your media to the nostr protocol that works in every single device.</p>
-			<div class="info_cards">
-				<div class="info"><span>81.26 GB</span> used</div>
-				<div class="info"><span>92,373</span> total uploads</div>
-			</div>
-		</div>
-		<div class="drag-area">
-			<div class="drag-area_sharing hidden_element">
-				<div class="sharing_container">
-					<img src="./assets/sharing_img.png" alt="sharing img" />
-					<div class="sharing_info">
-						Your image is ready for sharing
-						<a href="">https://nostr.build/i/3856.png</a>
-					</div>
+		<main>
+			<div class="title_container">
+				<h1>Nostr image uploader</h1>
+				<p>The easiest and more efficient way to upload your media to the nostr protocol that works in every single device.</p>
+				<div class="info_cards">
+					<div class="info"><span>81.26 GB</span> used</div>
+					<div class="info"><span>92,373</span> total uploads</div>
 				</div>
-				<button class="image_address">
-					<img src="./assets/copy.png" alt="" />
-					Copy Image Address
-				</button>
 			</div>
-			<div class="drag-area_header">
-				<img src="../assets/upload.png" alt="upload image" />
-				<h2 class="drag-area_title">Drag and drop your image here</h2>
-				<p class="drag-area_subtitle">or click the button below to choose it manually from your computer</p>
-				<button class="upload_button">
-					<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M10.6666 7.99998L7.99998 5.33331M7.99998 5.33331L5.33331 7.99998M7.99998 5.33331V11.4666C7.99998 12.3938 7.99998 12.8574 8.36698 13.3764C8.61085 13.7212 9.31291 14.1468 9.73145 14.2036C10.3614 14.2889 10.6006 14.1641 11.079 13.9146C13.2111 12.8024 14.6666 10.5712 14.6666 7.99998C14.6666 4.31808 11.6818 1.33331 7.99998 1.33331C4.31808 1.33331 1.33331 4.31808 1.33331 7.99998C1.33331 10.4676 2.67397 12.622 4.66665 13.7748"
-							stroke="url(#paint0_linear_198_91)"
-							stroke-width="1.33333"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-						<defs>
-							<linearGradient id="paint0_linear_198_91" x1="7.99998" y1="1.33331" x2="7.99998" y2="14.2303" gradientUnits="userSpaceOnUse">
-								<stop stop-color="#292556" />
-								<stop offset="1" stop-color="#120A24" />
-							</linearGradient>
-						</defs>
-					</svg>
-					Choose File
-				</button>
-			</div>
-			<img src="" alt="" class="uploaded_img" />
-			<div class="import">
-				<div class="input_container">
-					<div class="import_icon">
-						<img src="./assets/import_icon.png" alt="" />
+			<div class="drag-area">
+				<div class="drag-area_sharing hidden_element">
+					<div class="sharing_container">
+						<img src="./assets/sharing_img.png" alt="sharing img" />
+						<div class="sharing_info">
+							Your image is ready for sharing
+							<a href="">https://nostr.build/i/3856.png</a>
+						</div>
 					</div>
-					<input class="input_url" type="text" placeholder="Paste image URL to import" />
+					<button class="image_address">
+						<img src="./assets/copy.png" alt="" />
+						Copy Image Address
+					</button>
 				</div>
-				<button class="import_button">Import now</button>
+				<div class="drag-area_header">
+					<img src="../assets/upload.png" alt="upload image" />
+					<h2 class="drag-area_title">Drag and drop your image here</h2>
+					<p class="drag-area_subtitle">or click the button below to choose it manually from your computer</p>
+					<button class="upload_button">
+						<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M10.6666 7.99998L7.99998 5.33331M7.99998 5.33331L5.33331 7.99998M7.99998 5.33331V11.4666C7.99998 12.3938 7.99998 12.8574 8.36698 13.3764C8.61085 13.7212 9.31291 14.1468 9.73145 14.2036C10.3614 14.2889 10.6006 14.1641 11.079 13.9146C13.2111 12.8024 14.6666 10.5712 14.6666 7.99998C14.6666 4.31808 11.6818 1.33331 7.99998 1.33331C4.31808 1.33331 1.33331 4.31808 1.33331 7.99998C1.33331 10.4676 2.67397 12.622 4.66665 13.7748"
+								stroke="url(#paint0_linear_198_91)"
+								stroke-width="1.33333"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<defs>
+								<linearGradient id="paint0_linear_198_91" x1="7.99998" y1="1.33331" x2="7.99998" y2="14.2303" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#292556" />
+									<stop offset="1" stop-color="#120A24" />
+								</linearGradient>
+							</defs>
+						</svg>
+						Choose File
+					</button>
+				</div>
+				<img src="" alt="" class="uploaded_img" />
+				<div class="import">
+					<div class="input_container">
+						<div class="import_icon">
+							<img src="./assets/import_icon.png" alt="" />
+						</div>
+						<input class="input_url" type="text" placeholder="Paste image URL to import" />
+					</div>
+					<button class="import_button">Import now</button>
+				</div>
+				<input class="hidden_input" type="file" hidden />
 			</div>
-			<input class="hidden_input" type="file" hidden />
-		</div>
-		<div class="metadata_container hidden_element">
-			<div class="metadata_image_container">
-				<img src="./assets/folder.png" alt="metadata image" />
+			<div class="metadata_container hidden_element">
+				<div class="metadata_image_container">
+					<img src="./assets/folder.png" alt="metadata image" />
+				</div>
+				<div class="metadata_info">
+					<h3>Image metadata</h3>
+					<p class="metadata">Stripping metadata...Remaining metadata: Orientation is: 0, Original name: Home@2x.png, New name: 3856.png</p>
+				</div>
 			</div>
-			<div class="metadata_info">
-				<h3>Image metadata</h3>
-				<p class="metadata">Stripping metadata...Remaining metadata: Orientation is: 0, Original name: Home@2x.png, New name: 3856.png</p>
+			<div class="toast hidden_element">
+				<div class="import_icon">
+					<img src="./assets/import_icon.png" alt="" />
+				</div>
+				<div class="toast_info">
+					Copied
+					<p>Link of your image copied to clipboard</p>
+				</div>
 			</div>
-		</div>
-		<div class="toast hidden_element">
-			<div class="import_icon">
-				<img src="./assets/import_icon.png" alt="" />
-			</div>
-			<div class="toast_info">
-				Copied
-				<p>Link of your image copied to clipboard</p>
-			</div>
-		</div>
+		</main>
 		<footer>
 			<nav>
 				<div class="footer_made_by">
