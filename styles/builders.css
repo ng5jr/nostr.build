@@ -1,5 +1,5 @@
 main {
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	width: 1200px;
 	max-width: 100%;
@@ -23,7 +23,7 @@ h1 {
 	background-clip: text;
 	padding: 40px 0;
 	width: 100%;
-	text-align: center;
+	text-align: left;
 	text-fill-color: transparent;
 }
 
@@ -99,12 +99,56 @@ h1 {
 	place-items: center;
 }
 
-.builders_container {
-	display: flex;
+@media (min-width: 0) {
+	.builders_container {
+		display: grid;
+		width: 100%;
+		max-width: 100%;
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+		align-items: center;
+		justify-items: center;
+		gap: 18px;
+	}
+	.builder_card {
+		max-width: 290px;
+	}
+}
 
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 18px;
-	align-items: center;
-	justify-content: center;
+@media (min-width: 320px) {
+	.builders_container {
+		display: grid;
+		width: 100%;
+		max-width: 100%;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		align-items: center;
+		justify-items: center;
+		gap: 18px;
+	}
+	.builder_card {
+		max-width: 300px;
+	}
+}
+
+@media (min-width: 360px) {
+	.builders_container {
+		display: grid;
+		width: 100%;
+		max-width: 100%;
+		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+		align-items: center;
+		justify-items: center;
+		gap: 18px;
+	}
+	.builder_card {
+		max-width: 340px;
+	}
+}
+
+@media (min-width: 400px) {
+	.builders_container {
+		grid-template-columns: repeat(auto-fill, minmax(378px, 1fr));
+	}
+	.builder_card {
+		max-width: 378px;
+	}
 }

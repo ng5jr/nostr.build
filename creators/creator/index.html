@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="stylesheet" href="../../styles/index.css" />
-		<link rel="stylesheet" href="../../styles/creators.css" />
+		<link rel="stylesheet" href="../../styles/profile.css" />
 		<link rel="stylesheet" href="../../styles/header.css" />
 
 		<title>nostr.build</title>
@@ -168,27 +168,46 @@
 					profile pictures
 				</li>
 			</ul> -->
-			<h1>
-				Creators
-				<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<g opacity="0.5">
+			<section class="title_section">
+				<h1>
+					Creators
+					<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g opacity="0.5">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M8.29289 5.79289C8.68342 5.40237 9.31658 5.40237 9.70711 5.79289L15.7071 11.7929C16.0976 12.1834 16.0976 12.8166 15.7071 13.2071L9.70711 19.2071C9.31658 19.5976 8.68342 19.5976 8.29289 19.2071C7.90237 18.8166 7.90237 18.1834 8.29289 17.7929L13.5858 12.5L8.29289 7.20711C7.90237 6.81658 7.90237 6.18342 8.29289 5.79289Z"
+								fill="url(#paint0_linear_216_2863)"
+							/>
+						</g>
+						<defs>
+							<linearGradient id="paint0_linear_216_2863" x1="12.0053" y1="9.5326" x2="10.76" y2="19.3419" gradientUnits="userSpaceOnUse">
+								<stop stop-color="white" />
+								<stop offset="1" stop-color="#884EA4" />
+							</linearGradient>
+						</defs>
+					</svg>
+					<span>Creator 1</span>
+				</h1>
+				<button class="donate_button">
+					<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M8.29289 5.79289C8.68342 5.40237 9.31658 5.40237 9.70711 5.79289L15.7071 11.7929C16.0976 12.1834 16.0976 12.8166 15.7071 13.2071L9.70711 19.2071C9.31658 19.5976 8.68342 19.5976 8.29289 19.2071C7.90237 18.8166 7.90237 18.1834 8.29289 17.7929L13.5858 12.5L8.29289 7.20711C7.90237 6.81658 7.90237 6.18342 8.29289 5.79289Z"
-							fill="url(#paint0_linear_216_2863)"
+							d="M8.66675 1.83337L2.72904 8.95864C2.4965 9.23764 2.38024 9.37717 2.37846 9.49504C2.37691 9.59744 2.42256 9.69491 2.50224 9.75931C2.5939 9.83337 2.77552 9.83337 3.13876 9.83337H8.00008L7.33342 15.1667L13.2711 8.04144C13.5036 7.76244 13.6199 7.62291 13.6217 7.50504C13.6232 7.40264 13.5776 7.30517 13.4979 7.24077C13.4062 7.16671 13.2246 7.16671 12.8614 7.16671H8.00008L8.66675 1.83337Z"
+							stroke="url(#paint0_linear_229_555)"
+							stroke-width="1.33333"
+							stroke-linecap="round"
+							stroke-linejoin="round"
 						/>
-					</g>
-					<defs>
-						<linearGradient id="paint0_linear_216_2863" x1="12.0053" y1="9.5326" x2="10.76" y2="19.3419" gradientUnits="userSpaceOnUse">
-							<stop stop-color="white" />
-							<stop offset="1" stop-color="#884EA4" />
-						</linearGradient>
-					</defs>
-				</svg>
-				<span>Creator 1</span>
-			</h1>
-			<button class="donate_button">Donate</button>
+						<defs>
+							<linearGradient id="paint0_linear_229_555" x1="8.00007" y1="1.83337" x2="8.00007" y2="15.1667" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#292556" />
+								<stop offset="1" stop-color="#120A24" />
+							</linearGradient>
+						</defs>
+					</svg>
+					Donate
+				</button>
+			</section>
 
 			<div class="images_container"></div>
 		</main>
@@ -196,8 +215,12 @@
 			<nav>
 				<div class="footer_made_by">
 					nostr.build 2023 — made with ❤️ by
-					<img src="../../assets/footer_made.png" alt="walker image" />
+					<a href="" class="contact">
+						<img src="../../assets/footer_made.png" alt="walker image" />
+						Contact us
+					</a>
 				</div>
+
 				<div class="footer_contributors">
 					Key contributors
 					<ul class="contributors_list">
@@ -233,8 +256,7 @@
 						</li>
 					</ul>
 				</div>
-				<a class="footer_links" href="">Donate</a>
-				<a class="footer_links" href="">Contact us</a>
+				<a class="footer_links donate" href="">Donate</a>
 			</nav>
 		</footer>
 		<script src="../../scripts/images.js"></script>
