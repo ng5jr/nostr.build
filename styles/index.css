@@ -432,6 +432,7 @@ footer nav {
 	gap: 17px;
 	justify-content: center;
 	align-items: center;
+	list-style: none;
 }
 
 .footer_made_by {
@@ -474,12 +475,14 @@ footer nav {
 	flex-direction: row;
 	align-items: center;
 	gap: 9px;
+	list-style: none;
 }
 
 .contributors_list {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	list-style: none;
 }
 .contributor a {
 	display: grid;
