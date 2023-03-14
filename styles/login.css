@@ -87,6 +87,10 @@ body {
 	color: #d0bed8;
 }
 
+.login_form input:focus {
+	border: 1px solid #a58ead;
+}
+
 .login_form .login_button {
 	cursor: pointer;
 	height: 40px;

@@ -32,145 +32,6 @@ main {
 	justify-content: center;
 	align-items: center;
 }
-/* HEADER */
-
-header {
-	display: flex;
-	flex-direction: row;
-	padding-top: 48px;
-}
-
-.creators_list {
-	display: flex;
-	flex-direction: row;
-	padding: 0px;
-	gap: 16px;
-
-	width: 946px;
-	height: 40px;
-}
-
-.creator {
-	height: 40px;
-	list-style: none;
-	border-radius: 8px;
-	overflow: hidden;
-}
-
-.creator a {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 0px 16px 0px 0px;
-	gap: 8px;
-	justify-content: center;
-
-	border-radius: 8px;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 18px;
-	/* identical to box height */
-
-	text-align: center;
-	color: #a58ead;
-	text-decoration: none;
-	background-color: rgba(34, 28, 69, 0.84);
-	border: 1px solid;
-	border-image-slice: 1;
-
-	border-image-source: linear-gradient(180deg, #292556 0%, #120a24 100%);
-	border-radius: 8px;
-	clip-path: inset(0 round 4px);
-}
-
-.creator a img {
-	width: 40px;
-	height: 40px;
-	border-radius: 8px;
-}
-li {
-	list-style: none;
-}
-
-.navigation_header {
-	display: flex;
-	flex-direction: row;
-	gap: 16px;
-}
-
-.navigation_header a {
-	text-decoration: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	padding: 0 16px 0 0;
-	gap: 8px;
-	cursor: pointer;
-	width: fit-content;
-	height: 40px;
-
-	text-align: center;
-	border-radius: 8px;
-}
-
-.navigation_header a span {
-	display: grid;
-	place-items: center;
-	width: 40px;
-	height: 100%;
-	border-radius: 8px;
-	background: linear-gradient(180deg, #292556 0%, #120a24 100%);
-}
-
-.login_button {
-	background: linear-gradient(95.49deg, #ffffff 0%, #b098bb 100%);
-	box-shadow: 0px 4px 24px rgba(183, 161, 194, 0.3);
-
-	border: none;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 18px;
-}
-
-.home_button {
-	background: linear-gradient(99.91deg, rgba(90, 78, 139, 0.84) -0.53%, rgba(37, 28, 74, 0.84) 100%);
-	/* Solid/Text Secondary */
-
-	border: 1px solid #a58ead;
-	backdrop-filter: blur(8px);
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 18px;
-	/* identical to box height */
-
-	text-align: center;
-
-	/* Solid/Text Primary */
-
-	color: #d0bed8;
-}
-
-.home_button span {
-	border: 1px solid #a58ead;
-	box-sizing: content-box;
-}
-
-.nav_button {
-	background: rgba(34, 28, 69, 0.84);
-	border: 1px solid #362d69;
-	backdrop-filter: blur(8px);
-	border: 1px solid #362d69;
-	font-weight: 400;
-	color: #a58ead;
-}
-
-.nav_button span {
-	border: 1px solid #362d69;
-	box-sizing: content-box;
-}
 
 /* TITLE */
 .title_container {
@@ -375,6 +236,10 @@ li {
 	color: #d0bed8;
 }
 
+.drag-area p span {
+	color: #a58ead;
+}
+
 .drag-area .upload_button {
 	display: flex;
 	flex-direction: row;
@@ -390,6 +255,7 @@ li {
 	border-radius: 8px;
 	border: none;
 	color: #120a24;
+	font-weight: 600;
 }
 
 .import {
@@ -439,6 +305,10 @@ li {
 	color: white;
 }
 
+.input_url:focus {
+	border: 1px solid #a58ead;
+}
+
 .import_button {
 	padding: 11px 16px;
 	cursor: pointer;
@@ -457,6 +327,25 @@ li {
 	/* Solid/Text Primary */
 
 	color: #d0bed8;
+}
+
+.terms {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+
+	/* Solid/Text Secondary */
+
+	color: #a58ead;
+}
+
+.terms span {
+	background: linear-gradient(184.15deg, #ffffff 30.23%, #884ea4 96.61%), linear-gradient(0deg, #a58ead, #a58ead);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
 }
 
 .metadata_container {
@@ -546,6 +435,33 @@ footer nav {
 	gap: 9px;
 }
 
+.contact {
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 6px 12px;
+	gap: 8px;
+
+	width: 123px;
+	height: 36px;
+
+	background: rgba(54, 45, 105, 0.32);
+	border-radius: 24px;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 160%;
+	/* identical to box height, or 21px */
+
+	text-align: center;
+
+	/* Solid/Text Primary */
+
+	color: #d0bed8;
+
+	text-shadow: 0px 2px 16px rgba(159, 108, 209, 0.32);
+}
+
 .footer_contributors {
 	display: flex;
 	flex-direction: row;
@@ -566,6 +482,11 @@ footer nav {
 	border-radius: 100%;
 }
 
+.contributor img {
+	width: 22px;
+	height: 22px;
+}
+
 .footer_links {
 	text-decoration: none;
 	font-weight: 400;
@@ -578,6 +499,16 @@ footer nav {
 	/* Solid/Text Secondary */
 
 	color: #a58ead;
+
+	text-shadow: 0px 2px 16px rgba(159, 108, 209, 0.32);
+}
+
+.donate {
+	background: linear-gradient(103.7deg, #dabd55 0%, #f78533 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
 
 	text-shadow: 0px 2px 16px rgba(159, 108, 209, 0.32);
 }

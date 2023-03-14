@@ -7,7 +7,8 @@ const dropArea = document.querySelector(".drag-area"),
 	metadata = document.querySelector(".metadata_container"),
 	toast = document.querySelector(".toast"),
 	button = dropArea.querySelector(".upload_button"),
-	input = dropArea.querySelector(".hidden_input");
+	terms = document.querySelector(".terms");
+input = dropArea.querySelector(".hidden_input");
 let file; //this is a global variable and we'll use it inside multiple functions
 
 button.onclick = () => {
@@ -53,6 +54,7 @@ function showFile() {
 		};
 		fileReader.readAsDataURL(file);
 		dragHeader.classList.add("hidden_element");
+		terms.classList.add("hidden_element");
 		dragSharing.classList.remove("hidden_element");
 		dragImport.classList.add("hidden_element");
 		metadata.classList.remove("hidden_element");

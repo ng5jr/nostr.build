@@ -55,7 +55,7 @@ main {
 }
 
 h1 {
-	margin-top: 24px;
+	padding: 40px 0;
 	font-weight: 700;
 	font-size: 32px;
 	line-height: 41px;
@@ -70,4 +70,28 @@ h1 {
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	text-fill-color: transparent;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.donate_button {
+	all: unset;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 11px 16px;
+	gap: 8px;
+
+	width: 129px;
+	height: 40px;
+
+	/* Gradients/Orange */
+
+	background: linear-gradient(103.7deg, #dabd55 0%, #f78533 100%);
+	box-shadow: 0px 4px 24px rgba(57, 47, 113, 0.2);
+	border-radius: 8px;
 }

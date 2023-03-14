@@ -6,7 +6,7 @@ array.forEach((element) => {});
 for (let index = 0; index < Math.floor(Math.random() * 1000); index++) {
 	var img = document.createElement("img");
 	var number = Math.floor(Math.random() * 7) + 1;
-	img.src = `../assets/images/image ${number}.png`;
+	img.src = `../../assets/images/image ${number}.png`;
 	img.classList.add("image");
 
 	container.appendChild(img);
