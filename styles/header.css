@@ -22,7 +22,6 @@ li {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 0 16px 0 0;
 	gap: 8px;
 	cursor: pointer;
 	width: fit-content;
@@ -95,4 +94,25 @@ li {
 
 .active_button span {
 	border: 1px solid #a58ead;
+}
+
+@media (min-width: 0) {
+	.navigation_header a {
+		padding: 0;
+		font-size: 0;
+		gap: 0;
+	}
+	.nav_button:last-child {
+		padding: 0 16px 0 0;
+		gap: 8px;
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 550px) {
+	.navigation_header a {
+		padding: 0 16px 0 0;
+		gap: 8px;
+		font-size: 14px;
+	}
 }

@@ -157,6 +157,41 @@
 				</div>
 			</div>
 			<div class="drag-area">
+				<div class="drag-area_loading hidden_element">
+					<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							opacity="0.12"
+							d="M25.3333 8C14.2876 8 5.33331 16.9543 5.33331 28C5.33331 33.5096 7.56118 38.4989 11.1652 42.116L21.3333 42.6667L32 32L42.6666 42.7264V44.0072L53.3333 44.6475C56.5906 41.9573 58.6666 37.8877 58.6666 33.3333C58.6666 25.2331 52.1002 18.6667 44 18.6667C43.6784 18.6667 43.3592 18.677 43.0426 18.6974C39.6946 12.3369 33.0205 8 25.3333 8Z"
+							fill="url(#paint0_linear_40_1026)"
+						/>
+						<path
+							d="M21.3333 42.6667L32 32M32 32L42.6666 42.6667M32 32V56M53.3333 44.6475C56.5906 41.9573 58.6666 37.8877 58.6666 33.3333C58.6666 25.2331 52.1002 18.6667 44 18.6667C43.4173 18.6667 42.8722 18.3627 42.5762 17.8606C39.0989 11.9596 32.6784 8 25.3333 8C14.2876 8 5.33331 16.9543 5.33331 28C5.33331 33.5096 7.56118 38.4989 11.1652 42.116"
+							stroke="url(#paint1_linear_40_1026)"
+							stroke-width="5.33333"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+						<defs>
+							<linearGradient id="paint0_linear_40_1026" x1="32.0355" y1="18.5561" x2="30.7381" y2="44.5828" gradientUnits="userSpaceOnUse">
+								<stop stop-color="white" />
+								<stop offset="1" stop-color="#884EA4" />
+							</linearGradient>
+							<linearGradient id="paint1_linear_40_1026" x1="32.0355" y1="21.8261" x2="29.8138" y2="55.855" gradientUnits="userSpaceOnUse">
+								<stop stop-color="white" />
+								<stop offset="1" stop-color="#884EA4" />
+							</linearGradient>
+						</defs>
+					</svg>
+					<div class="upload_title">
+						<h2>Uploading <span>[image_name.png]</span></h2>
+						<p>Wait a little bit, your image will be ready soon.</p>
+					</div>
+					<div class="loading_bar">
+						<div class="loading_state"></div>
+					</div>
+					<p class="loading_info">Uploading <span></span>%</p>
+					<button class="cancel_upload">Cancel</button>
+				</div>
 				<div class="drag-area_sharing hidden_element">
 					<div class="sharing_container">
 						<svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -323,7 +358,10 @@
 						Choose File
 					</button>
 				</div>
-				<img src="" alt="" class="uploaded_img" />
+				<div class="img_container">
+					<img src="" alt="" class="uploaded_img" />
+				</div>
+
 				<div class="import">
 					<div class="input_container">
 						<div class="import_icon">
@@ -341,7 +379,7 @@
 					</div>
 					<button class="import_button">Import now</button>
 				</div>
-				<input class="hidden_input" type="file" hidden />
+				<input class="hidden_input" type="file" accept="video" hidden />
 			</div>
 			<div class="terms">
 				Uploading agrees to our <a href="./tos/"><span>Terms of Service</span></a>

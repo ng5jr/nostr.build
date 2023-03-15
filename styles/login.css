@@ -2,9 +2,13 @@ body {
 	display: flex;
 
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	gap: 24px;
+}
+
+main {
+	flex-grow: 1;
 }
 .login_form {
 	width: 462px;

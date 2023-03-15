@@ -16,15 +16,16 @@ body {
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: top;
+	min-height: 100vh;
 }
 
 main {
-	min-height: 100vh;
+	flex-grow: 1;
 	width: 100%;
 	display: flex;
 
@@ -203,6 +204,12 @@ main {
 	gap: 24px;
 }
 
+.img_container {
+	flex-grow: 1;
+	display: grid;
+	place-items: center;
+}
+
 .uploaded_img {
 	border-radius: 16px;
 	max-width: 100%;
@@ -256,6 +263,112 @@ main {
 	border: none;
 	color: #120a24;
 	font-weight: 600;
+}
+
+.drag-area_loading {
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+	flex-grow: 1;
+}
+
+.upload_title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.upload_title h2 {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	/* identical to box height */
+
+	text-align: center;
+
+	/* Gradients/pinkish */
+
+	background: linear-gradient(184.15deg, #ffffff 30.23%, #884ea4 96.61%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+.upload_title p {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+
+	/* Solid/Text Primary */
+
+	color: #d0bed8;
+}
+
+.loading_bar {
+	background: linear-gradient(180deg, #292556 0%, #4a457c 0.01%, #493c66 100%);
+	border-radius: 24px;
+	position: relative;
+	width: 100%;
+	height: 8px;
+	overflow: hidden;
+}
+
+.loading_state {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 100%;
+	background: linear-gradient(180deg, #d251d5 0%, #8a0578 100%);
+	border-radius: 24px;
+	border-radius: 24px;
+}
+
+.drag-area_loading .loading_info {
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 14px;
+	/* identical to box height */
+
+	background: linear-gradient(180deg, #d251d5 0%, #8a0578 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	text-align: left;
+	width: 100%;
+	margin-top: -10px;
+}
+
+.cancel_upload {
+	border: none;
+	cursor: pointer;
+	width: 78px;
+	height: 32px;
+
+	background: linear-gradient(180deg, #292556 0%, #1e1530 100%);
+	/* Solid/Borders */
+
+	border: 1px solid #362d69;
+	box-shadow: 0px 4px 24px rgba(57, 47, 113, 0.2);
+	border-radius: 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	/* identical to box height */
+
+	text-align: center;
+
+	/* Solid/Text Primary */
+
+	color: #d0bed8;
 }
 
 .import {

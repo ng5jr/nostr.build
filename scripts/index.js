@@ -5,6 +5,9 @@ const dropArea = document.querySelector(".drag-area"),
 	dragSharing = dropArea.querySelector(".drag-area_sharing"),
 	dragImport = dropArea.querySelector(".import"),
 	metadata = document.querySelector(".metadata_container"),
+	loadingBar = document.querySelector(".loading_state"),
+	loadingInfo = document.querySelector(".loading_info span"),
+	loadingArea = document.querySelector(".drag-area_loading"),
 	toast = document.querySelector(".toast"),
 	button = dropArea.querySelector(".upload_button"),
 	terms = document.querySelector(".terms");
@@ -40,11 +43,12 @@ dropArea.addEventListener("drop", (event) => {
 	//getting user select file and [0] this means if user select multiple files then we'll select only the first one
 	file = event.dataTransfer.files[0];
 	showFile(); //calling function
+	console.log(file);
 });
 
 function showFile() {
 	let fileType = file.type; //getting selected file type
-	let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+	let validExtensions = ["image/jpeg", "image/jpg", "image/png", "video/*", "video/mkv", "video/x-m4v", "video/mp4"]; //adding some valid image extensions in array
 	if (validExtensions.includes(fileType)) {
 		//if user selected file is an image file
 		let fileReader = new FileReader(); //creating new FileReader object
@@ -52,10 +56,27 @@ function showFile() {
 			let fileURL = fileReader.result; //passing user file source in fileURL variable
 			dropArea.querySelector(".uploaded_img").src = fileURL;
 		};
+		fileReader.addEventListener("loadstart", function () {
+			loadingBar.style.width = "0%";
+			loadingInfo.innerHTML = "0";
+			loadingArea.classList.remove("hidden_element");
+		});
+		fileReader.addEventListener("progress", function (e) {
+			if (e.lengthComputable) {
+				const percentLoaded = (e.loaded / e.total) * 100;
+				loadingBar.style.width = `${percentLoaded}%`;
+				loadingInfo.innerHTML = Math.floor(percentLoaded);
+			}
+		});
+
+		fileReader.addEventListener("loadend", function () {
+			loadingArea.classList.add("hidden_element");
+			dragSharing.classList.remove("hidden_element");
+		});
+
 		fileReader.readAsDataURL(file);
 		dragHeader.classList.add("hidden_element");
 		terms.classList.add("hidden_element");
-		dragSharing.classList.remove("hidden_element");
 		dragImport.classList.add("hidden_element");
 		metadata.classList.remove("hidden_element");
 	} else {
