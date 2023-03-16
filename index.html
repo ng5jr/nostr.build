@@ -358,8 +358,9 @@
 						Choose File
 					</button>
 				</div>
-				<div class="img_container">
+				<div class="media_container">
 					<img src="" alt="" class="uploaded_img" />
+					<video id="video-player" class="uploaded_video hidden_element" controls></video>
 				</div>
 
 				<div class="import">
@@ -379,7 +380,7 @@
 					</div>
 					<button class="import_button">Import now</button>
 				</div>
-				<input class="hidden_input" type="file" accept="video" hidden />
+				<input id="input_file" class="hidden_input" type="file" hidden />
 			</div>
 			<div class="terms">
 				Uploading agrees to our <a href="./tos/"><span>Terms of Service</span></a>
@@ -403,6 +404,11 @@
 				</div>
 			</div>
 		</main>
+		<!-- <form>
+			<input type="file" id="video-input" accept="video/*" />
+			<button type="button" onclick="loadVideo()">Load</button>
+		</form> -->
+
 		<footer>
 			<nav>
 				<div class="footer_made_by">

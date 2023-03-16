@@ -42,20 +42,44 @@ dropArea.addEventListener("drop", (event) => {
 	event.preventDefault(); //preventing from default behaviour
 	//getting user select file and [0] this means if user select multiple files then we'll select only the first one
 	file = event.dataTransfer.files[0];
-	showFile(); //calling function
 	console.log(file);
+	showFile(); //calling function
 });
+
+function loadVideo(file) {
+	console.log(file);
+	const reader = new FileReader();
+
+	reader.onload = () => {
+		const videoPlayer = document.getElementById("video-player");
+		videoPlayer.src = reader.result;
+		videoPlayer.play();
+	};
+
+	reader.readAsDataURL(file);
+}
 
 function showFile() {
 	let fileType = file.type; //getting selected file type
+
 	let validExtensions = ["image/jpeg", "image/jpg", "image/png", "video/*", "video/mkv", "video/x-m4v", "video/mp4"]; //adding some valid image extensions in array
 	if (validExtensions.includes(fileType)) {
 		//if user selected file is an image file
 		let fileReader = new FileReader(); //creating new FileReader object
-		fileReader.onload = () => {
-			let fileURL = fileReader.result; //passing user file source in fileURL variable
-			dropArea.querySelector(".uploaded_img").src = fileURL;
-		};
+
+		if (fileType.includes("image")) {
+			fileReader.onload = () => {
+				let fileURL = fileReader.result; //passing user file source in fileURL variable
+				dropArea.querySelector(".uploaded_img").src = fileURL;
+			};
+		} else if (fileType.includes("video")) {
+			fileReader.onload = () => {
+				const videoPlayer = document.getElementById("video-player");
+				videoPlayer.src = fileReader.result;
+				videoPlayer.play();
+			};
+		}
+
 		fileReader.addEventListener("loadstart", function () {
 			loadingBar.style.width = "0%";
 			loadingInfo.innerHTML = "0";
@@ -72,6 +96,9 @@ function showFile() {
 		fileReader.addEventListener("loadend", function () {
 			loadingArea.classList.add("hidden_element");
 			dragSharing.classList.remove("hidden_element");
+			if (fileType.includes("video")) {
+				dropArea.querySelector(".uploaded_video").classList.remove("hidden_element");
+			}
 		});
 
 		fileReader.readAsDataURL(file);
@@ -98,3 +125,5 @@ let copyAddress = document.querySelector(".image_address");
 copyAddress.addEventListener("click", () => {
 	showToast();
 });
+
+const inputVideo = document.getElementById("video-input");

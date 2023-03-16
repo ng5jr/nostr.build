@@ -204,13 +204,14 @@ main {
 	gap: 24px;
 }
 
-.img_container {
+.media_container {
 	flex-grow: 1;
 	display: grid;
 	place-items: center;
 }
 
-.uploaded_img {
+.uploaded_img,
+.uploaded_video {
 	border-radius: 16px;
 	max-width: 100%;
 }
