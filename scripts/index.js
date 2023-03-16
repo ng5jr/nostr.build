@@ -100,6 +100,7 @@ function showFile() {
 				dropArea.querySelector(".uploaded_video").classList.remove("hidden_element");
 				document.querySelector(".sharing_info span").textContent = "video";
 				document.querySelector(".image_address").textContent = "Copy Video Address";
+				document.querySelector(".toast_info span").textContent = "video";
 			}
 		});
 

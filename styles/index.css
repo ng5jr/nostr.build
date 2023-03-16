@@ -264,6 +264,11 @@ main {
 	border: none;
 	color: #120a24;
 	font-weight: 600;
+	transition: all 0.3s;
+}
+
+.drag-area .upload_button:hover {
+	box-shadow: 0px 4px 18px rgba(134, 127, 174, 0.4);
 }
 
 .drag-area_loading {
@@ -441,6 +446,11 @@ main {
 	/* Solid/Text Primary */
 
 	color: #d0bed8;
+	transition: all 0.3s;
+}
+
+.import_button:hover {
+	box-shadow: 0px 4px 24px rgba(134, 127, 174, 0.2);
 }
 
 .terms {
