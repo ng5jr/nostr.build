@@ -201,7 +201,15 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 24px;
+	gap: 10px;
+}
+
+.drag-area_header .image_svg {
+	margin-bottom: 20px;
+}
+
+.supported_file {
+	margin-top: 6px;
 }
 
 .media_container {
@@ -732,6 +740,7 @@ footer nav {
 		width: 340px;
 		max-width: 100%;
 		margin: 0 auto;
+		display: none;
 	}
 	.drag-area {
 		width: 100%;
@@ -807,6 +816,7 @@ footer nav {
 		font-size: 20px;
 		line-height: 32px;
 		width: unset;
+		display: block;
 	}
 	.drag-area {
 		width: 696px;
