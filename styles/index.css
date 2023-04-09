@@ -204,6 +204,14 @@ main {
 	gap: 10px;
 }
 
+.drag-area_header form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
 .drag-area_header .image_svg {
 	margin-bottom: 20px;
 }
@@ -213,7 +221,6 @@ main {
 }
 
 .media_container {
-	flex-grow: 1;
 	display: grid;
 	place-items: center;
 }
@@ -264,7 +271,7 @@ main {
 	padding: 11px 16px;
 	gap: 8px;
 	cursor: pointer;
-	width: 134px;
+	width: fit-content;
 	height: 40px;
 	background: linear-gradient(95.49deg, #ffffff 0%, #b098bb 100%);
 	box-shadow: 0px 4px 24px rgba(183, 161, 194, 0.3);

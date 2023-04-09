@@ -25,26 +25,26 @@ input.addEventListener("change", function () {
 	showFile(); //calling function
 });
 //If user Drag File Over DropArea
-dropArea.addEventListener("dragover", (event) => {
-	event.preventDefault(); //preventing from default behaviour
-	dropArea.classList.add("active");
-	dragText.textContent = "Release to Upload File";
-});
+// dropArea.addEventListener("dragover", (event) => {
+// 	event.preventDefault(); //preventing from default behaviour
+// 	dropArea.classList.add("active");
+// 	dragText.textContent = "Release to Upload File";
+// });
 
 //If user leave dragged File from DropArea
-dropArea.addEventListener("dragleave", () => {
-	dropArea.classList.remove("active");
-	dragText.textContent = "Drag & Drop to Upload File";
-});
+// dropArea.addEventListener("dragleave", () => {
+// 	dropArea.classList.remove("active");
+// 	dragText.textContent = "Drag & Drop to Upload File";
+// });
 
 //If user drop File on DropArea
-dropArea.addEventListener("drop", (event) => {
-	event.preventDefault(); //preventing from default behaviour
-	//getting user select file and [0] this means if user select multiple files then we'll select only the first one
-	file = event.dataTransfer.files[0];
-	console.log(file);
-	showFile(); //calling function
-});
+// dropArea.addEventListener("drop", (event) => {
+// 	event.preventDefault(); //preventing from default behaviour
+// 	//getting user select file and [0] this means if user select multiple files then we'll select only the first one
+// 	file = event.dataTransfer.files[0];
+// 	console.log(file);
+// 	showFile(); //calling function
+// });
 
 function loadVideo(file) {
 	console.log(file);
@@ -95,7 +95,8 @@ function showFile() {
 
 		fileReader.addEventListener("loadend", function () {
 			loadingArea.classList.add("hidden_element");
-			dragSharing.classList.remove("hidden_element");
+			dragHeader.classList.remove("hidden_element");
+
 			if (fileType.includes("video")) {
 				dropArea.querySelector(".uploaded_video").classList.remove("hidden_element");
 				document.querySelector(".sharing_info span").textContent = "video";
@@ -107,8 +108,8 @@ function showFile() {
 		fileReader.readAsDataURL(file);
 		dragHeader.classList.add("hidden_element");
 		terms.classList.add("hidden_element");
-		dragImport.classList.add("hidden_element");
-		metadata.classList.remove("hidden_element");
+		// dragImport.classList.add("hidden_element");
+		// metadata.classList.remove("hidden_element");
 	} else {
 		alert("This is not an Image File!");
 		dropArea.classList.remove("active");
@@ -123,10 +124,10 @@ function showToast() {
 	}, 1500);
 }
 
-let copyAddress = document.querySelector(".image_address");
+// let copyAddress = document.querySelector(".image_address");
 
-copyAddress.addEventListener("click", () => {
-	showToast();
-});
+// copyAddress.addEventListener("click", () => {
+// 	showToast();
+// });
 
 const inputVideo = document.getElementById("video-input");
